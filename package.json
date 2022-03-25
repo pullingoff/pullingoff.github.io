@@ -1,0 +1,15 @@
+{
+  "name": "TIL",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pullingoff/vue-TIL",
+  "author": "Haeun Park <devhaeun@gamil.com>",
+  "scripts": {
+    "docs:dev": "vuepress dev --port 8000",
+    "docs:build": "vuepress build"  
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
