@@ -11,7 +11,7 @@ set -e
 # build
 yarn docs:build
 # navigate into the build output directory
-cd docs/.vuepress/dist
+cd .vuepress/dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME

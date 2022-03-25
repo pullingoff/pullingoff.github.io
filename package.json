@@ -5,7 +5,7 @@
   "repository": "https://github.com/pullingoff/vue-TIL",
   "author": "Haeun Park <devhaeun@gamil.com>",
   "scripts": {
-    "docs:dev": "vuepress dev --port 8000",
+    "docs:dev": "vuepress dev",
     "docs:build": "vuepress build"  
   },
   "license": "MIT",
