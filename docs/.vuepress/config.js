@@ -10,7 +10,7 @@ module.exports = {
       sidebar: getSidebarArr(), // h1~h6 같은 heading tag를 기준으로 sidebar를 만들어줌
       smoothScroll: true
     },
-    base: "/vue-til/dist/"  // github.io 두ㅣ 주소 
+    base: "/vue-til/"  // github.io 두ㅣ 주소 
   }
 
 function getSidebarArr() {

@@ -2,6 +2,9 @@
   "name": "TIL",
   "version": "1.0.0",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "repository": "https://github.com/pullingoff/vue-TIL",
   "author": "Haeun Park <devhaeun@gamil.com>",
   "scripts": {
