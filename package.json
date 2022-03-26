@@ -1,7 +1,8 @@
 {
-  "name": "TIL",
+  "name": "제발 TIL",
   "version": "1.0.0",
   "main": "index.js",
+  "base": "/vue-til/",
   "directories": {
     "doc": "docs"
   },
