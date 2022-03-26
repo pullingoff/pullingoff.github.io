@@ -5,7 +5,7 @@ module.exports = {
       logo: '', // 로고 이미지
       nav: [
         { text: 'Home', link: '/' },
-        { text: 'Github', link: '/blah' }
+        { text: 'Github', link: '/blah/' }
       ],
       sidebar: getSidebarArr(), // h1~h6 같은 heading tag를 기준으로 sidebar를 만들어줌
       smoothScroll: true
@@ -15,35 +15,41 @@ module.exports = {
 
 function getSidebarArr() {
   const fs = require("fs");
-  let docsPath = __dirname + "/../";
+  // let docsPath = __dirname + "/../";
+  let docsPath = __dirname + "/../til/";
+  // console.log(docsPath)
   let sidebarArr = [];
   let HomeFilelist = [];
 
   // 이 디렉토리들은 안 보이게
-  const hideSet = new Set(['node_modules', '.git']);
+  // const hideSet = new Set(['node_modules', '.git']);
   let filelist = fs.readdirSync(docsPath);
 
-  filelist = filelist.filter((name) => {
-    return !hideSet.has(name);
-  });
+  // filelist = filelist.filter((name) => {
+  //   return !hideSet.has(name);
+  // });
+  
 
   filelist.forEach(function(file) {
     if (file === ".vuepress") return;
-    var stat = fs.lstatSync(docsPath + "/" + file);
+    var til_path = docsPath + "/" + file
+    var stat = fs.lstatSync(til_path);
     if (stat.isDirectory()) {
-      var docsFolderPath = docsPath + "/" + file;
+      var docsFolderPath = til_path;
       var list = fs.readdirSync(docsFolderPath);
       sidebarArr.push(makeSidebarObject(file, list));
     } else {
-      
       HomeFilelist.push(file);
     }
   });
   sidebarArr.unshift(makeSidebarObject("", HomeFilelist));
+  // console.dir(sidebarArr)
+  // console.error(`HomeFile----: ${HomeFilelist}`)
   return sidebarArr;
 }
 function makeSidebarObject(folder, mdfileList) {
-  let path = folder ? "/" + folder + "/" : "/";
+  let til_path = "/til/"
+  let path = folder ? til_path + folder + "/" : til_path;
   mdfileList = aheadOfReadme(mdfileList);
   let tmpMdfileList = [];
   // remove .md, add Path
@@ -55,6 +61,7 @@ function makeSidebarObject(folder, mdfileList) {
   });
   mdfileList = tmpMdfileList;
   // remove folder prefix number
+  console.log(`folder: ${folder}`)
   if (folder) {
     const dotIdx = folder.indexOf(".");
     var title = Number(folder.substr(0, dotIdx))
@@ -63,8 +70,10 @@ function makeSidebarObject(folder, mdfileList) {
   } else {
     title = "HOME";
   }
+  // console.log(`/${folder}${title}`)
   return {
     title: title,
+    // path: `/${folder}`,
     children: mdfileList
   };
 }
