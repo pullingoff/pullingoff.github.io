@@ -18,7 +18,7 @@ module.exports = {
     configureWebpack: {
       resolve: {
         alias: {
-          '@base': '/vue-til'
+          '@base': path.resolve(__dirname, '/public')
         }
       }
     }
