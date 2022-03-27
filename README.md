@@ -1,7 +1,6 @@
 
 # 박하은의 TIL
-
-[Today I Learned. 하루하루 배운 것을 기록합니다.](https://pullingoff.github.io/vue-til)
+<a href="https://pullingoff.github.io/vue-til" target="_blank">Today I Learned. 하루하루 배운 것을 기록합니다.</a>
 
 ## Install
 
