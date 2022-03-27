@@ -1,5 +1,5 @@
 module.exports = {
-    title: '개발자 박하은 : TIL', // 사이트 타이틀
+    title: '개발자 박하은 : TIL',
     description: '하루하루 배운 것을 적어봅니당',
     themeConfig: {
       logo: '', // 로고 이미지
@@ -7,29 +7,24 @@ module.exports = {
         { text: 'Home', link: '/' },
         { text: 'Github', link: '/blah/' }
       ],
-      sidebar: getSidebarArr(), // h1~h6 같은 heading tag를 기준으로 sidebar를 만들어줌
+      sidebar: getSidebarArr(), 
       smoothScroll: true
     },
-    base: "/vue-til/",  // github.io 두ㅣ 주소 
-    // "deploy": "npm run build && npx gh-pages docs/.vuepress/dist"
+    base: "/vue-til/",  // github.io 뒤 주소
+    plugins: [
+      ["@vuepress/back-to-top"],
+      ["@vuepress/last-updated"],
+    ]
   }
 
 function getSidebarArr() {
   const fs = require("fs");
-  // let docsPath = __dirname + "/../";
   let docsPath = __dirname + "/../til/";
-  // console.log(docsPath)
   let sidebarArr = [];
   let HomeFilelist = [];
-
-  // 이 디렉토리들은 안 보이게
-  // const hideSet = new Set(['node_modules', '.git']);
   let filelist = fs.readdirSync(docsPath);
 
-  // filelist = filelist.filter((name) => {
-  //   return !hideSet.has(name);
-  // });
-  
+  // Next.js 처럼 폴더명에 . 들어가도 되게 수정하기
 
   filelist.forEach(function(file) {
     if (file === ".vuepress") return;
@@ -44,8 +39,6 @@ function getSidebarArr() {
     }
   });
   sidebarArr.unshift(makeSidebarObject("", HomeFilelist));
-  // console.dir(sidebarArr)
-  // console.error(`HomeFile----: ${HomeFilelist}`)
   return sidebarArr;
 }
 function makeSidebarObject(folder, mdfileList) {
@@ -53,6 +46,7 @@ function makeSidebarObject(folder, mdfileList) {
   let path = folder ? til_path + folder + "/" : til_path;
   mdfileList = aheadOfReadme(mdfileList);
   let tmpMdfileList = [];
+  
   // remove .md, add Path
   mdfileList.forEach(function(mdfile) {
     if (mdfile.substr(-3) === ".md") {
@@ -61,8 +55,8 @@ function makeSidebarObject(folder, mdfileList) {
     }
   });
   mdfileList = tmpMdfileList;
+
   // remove folder prefix number
-  // console.log(`folder: ${folder}`)
   if (folder) {
     const dotIdx = folder.indexOf(".");
     var title = Number(folder.substr(0, dotIdx))
@@ -71,7 +65,7 @@ function makeSidebarObject(folder, mdfileList) {
   } else {
     title = "HOME";
   }
-  // console.log(`/${folder}${title}`)
+  // console.dir(mdfileList)
   return {
     title: title,
     // path: `/${folder}`,

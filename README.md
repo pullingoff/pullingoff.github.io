@@ -1,8 +1,18 @@
 
-# TIL
+# 박하은의 TIL
 
-## 두근 두근
-이 형식이 너무 .. 가독성이 좋았어서 기대를 많이 했당
+Today I Learned. 하루하루 배운 것을 기록합니다.
+
+## Install
+
+`
+yarn init -y 
+yarn add -D vuepress
+yarn docs:build
+`
+
+## Tech Stacks
+vuepress
 
 ### 과연 어떨 것인지?
 
