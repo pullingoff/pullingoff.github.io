@@ -15,13 +15,13 @@ module.exports = {
       ["@vuepress/back-to-top"],
       ["@vuepress/last-updated"],
     ],
-    // configureWebpack: {
-    //   resolve: {
-    //     alias: {
-    //       '@base': '/vue-til'
-    //     }
-    //   }
-    // }
+    configureWebpack: {
+      resolve: {
+        alias: {
+          '@base': '/vue-til'
+        }
+      }
+    }
   }
 
 function getSidebarArr() {
