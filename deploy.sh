@@ -20,7 +20,7 @@ git init
 git add -A
 git commit -m 'deploy with vuepress'
 
-git push -f https://github.com/pullingoff/vue-til.git master:gh-pages
+git push -f https://github.com/pullingoff/vue-til.git main:gh-pages
 
 
 cd -
