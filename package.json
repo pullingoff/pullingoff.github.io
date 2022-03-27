@@ -17,6 +17,7 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "@vuepress/plugin-last-updated": "^1.9.7",
+    "html-webpack-plugin": "^5.5.0",
     "vuepress": "^1.9.7"
   }
 }
