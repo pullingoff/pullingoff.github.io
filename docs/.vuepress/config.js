@@ -55,6 +55,8 @@ function getSidebarArr() {
   // console.log(sidebarArr)
   return recentTilToFirst(sidebarArr, 1, 0);
 }
+
+// 디렉토리명때문에 최근거가 맨 위로 못 오니까 맨 위로 오도록 수정
 function recentTilToFirst(arr, fromIndex, toIndex) {
   var element = arr[fromIndex];
   arr.splice(fromIndex, 1);
