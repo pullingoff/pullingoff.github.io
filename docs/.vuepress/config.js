@@ -21,6 +21,16 @@ module.exports = {
       ['link', { rel: 'icon', href: '/logo.svg' }],
       ['link', { rel: 'manifest', href: '/manifest.json' }]
     ],
+    configureWebpack: (config, isServer) => {
+      configureWebpack: (config) => {
+        return {
+          plugins: [
+            new HtmlWebpackPlugin(),
+            new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin),
+          ],
+        };
+      };
+    },
     // plugins: [
     //   ['@vuepress/pwa', {
     //       serviceWorker: true,
