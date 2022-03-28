@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     title: '개발자 박하은 : TIL',
@@ -26,7 +27,6 @@ module.exports = {
         return {
           plugins: [
             new HtmlWebpackPlugin(),
-            new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin),
           ],
         };
       };
