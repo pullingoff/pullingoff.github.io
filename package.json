@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "repository": "https://github.com/pullingoff/vue-TIL",
-  "author": "Haeun Park <devhaeun@gamil.com>",
+  "author": "Haeun Park <devhaeun@gmail.com>",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -18,7 +18,6 @@
     "@vuepress/bundler-webpack": "^2.0.0-beta.36",
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "@vuepress/plugin-last-updated": "^1.9.7",
-    "html-webpack-plugin": "^5.5.0",
     "vuepress": "^1.9.7"
   },
   "dependencies": {
