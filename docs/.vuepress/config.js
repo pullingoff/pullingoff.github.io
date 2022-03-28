@@ -1,5 +1,4 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     title: '개발자 박하은 : TIL',
@@ -22,15 +21,6 @@ module.exports = {
       ['link', { rel: 'icon', href: '/logo.svg' }],
       ['link', { rel: 'manifest', href: '/manifest.json' }]
     ],
-    configureWebpack: (config, isServer) => {
-      configureWebpack: (config) => {
-        return {
-          plugins: [
-            new HtmlWebpackPlugin(),
-          ],
-        };
-      };
-    },
     // plugins: [
     //   ['@vuepress/pwa', {
     //       serviceWorker: true,

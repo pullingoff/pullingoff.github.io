@@ -21,6 +21,7 @@
     "vuepress": "^1.9.7"
   },
   "dependencies": {
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "webpack": "^4.0.0"
   }
 }
