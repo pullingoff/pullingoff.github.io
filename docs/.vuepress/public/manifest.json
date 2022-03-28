@@ -1,0 +1,17 @@
+{
+    "name": "Haeun Park's TIL",
+    "short_name": "haeun",
+    "start_url": "/?utm_source=homescreen",
+    "icons": [
+      {
+        "src": "images/logo.svg",
+        "sizes": "144x144",
+        "type": "image/svg"
+      }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "display": "fullscreen",
+    "orientation": "portrait"
+  }
+  
