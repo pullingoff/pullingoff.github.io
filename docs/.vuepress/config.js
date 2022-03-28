@@ -1,11 +1,13 @@
+const path = require("path");
+
 module.exports = {
     title: '개발자 박하은 : TIL',
     description: '하루하루 배운 것을 적어봅니당',
     themeConfig: {
       logo: '', // 로고 이미지
       nav: [
-        { text: 'Home', link: '/' },
-        { text: 'Github', link: '/blah/' }
+        { text: 'Home', link: '/til/2022/03.html' },
+        { text: 'Github', link: 'https://github.com/pullingoff' }
       ],
       sidebar: getSidebarArr(), 
       smoothScroll: true
@@ -15,20 +17,23 @@ module.exports = {
       ["@vuepress/back-to-top"],
       ["@vuepress/last-updated"],
     ],
-    configureWebpack: {
-      resolve: {
-        alias: {
-          '@base': path.resolve(__dirname, '/public')
-        }
-      }
-    }
+    head: [
+      ['link', { rel: 'icon', href: '/logo.svg' }],
+      ['link', { rel: 'manifest', href: '/manifest.json' }]
+    ],
+    // plugins: [
+    //   ['@vuepress/pwa', {
+    //       serviceWorker: true,
+    //       updatePopup: true
+    //   }]
+    // ]
   }
 
 function getSidebarArr() {
   const fs = require("fs");
   let docsPath = __dirname + "/../til/";
   let sidebarArr = [];
-  let HomeFilelist = [];
+  // let HomeFilelist = [];
   let filelist = fs.readdirSync(docsPath);
 
   // Next.js 처럼 폴더명에 . 들어가도 되게 수정하기
@@ -41,12 +46,20 @@ function getSidebarArr() {
       var docsFolderPath = til_path;
       var list = fs.readdirSync(docsFolderPath);
       sidebarArr.push(makeSidebarObject(file, list));
-    } else {
-      HomeFilelist.push(file);
-    }
+    } 
+    // else {
+    //   HomeFilelist.push(file);
+    // }
   });
-  sidebarArr.unshift(makeSidebarObject("", HomeFilelist));
-  return sidebarArr;
+  // sidebarArr.unshift(makeSidebarObject("", HomeFilelist));
+  // console.log(sidebarArr)
+  return recentTilToFirst(sidebarArr, 1, 0);
+}
+function recentTilToFirst(arr, fromIndex, toIndex) {
+  var element = arr[fromIndex];
+  arr.splice(fromIndex, 1);
+  arr.splice(toIndex, 0, element);
+  return arr
 }
 function makeSidebarObject(folder, mdfileList) {
   let til_path = "/til/"
@@ -72,7 +85,6 @@ function makeSidebarObject(folder, mdfileList) {
   } else {
     title = "HOME";
   }
-  // console.dir(mdfileList)
   return {
     title: title,
     // path: `/${folder}`,
