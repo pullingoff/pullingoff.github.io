@@ -9,7 +9,7 @@ set -e
 # git push origin master
 
 # build
-npm docs:build
+npm run docs:build
 # navigate into the build output directory
 cd docs/.vuepress/dist
 

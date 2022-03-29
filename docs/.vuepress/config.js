@@ -4,7 +4,7 @@ module.exports = {
   title: '개발자 박하은 : TIL',
   description: '하루하루 배운 것을 적어봅니당',
   themeConfig: {
-    logo: '', // 로고 이미지
+    logo: '/images/logo.svg', // 로고 이미지
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Github', link: '/blah/' }
@@ -20,21 +20,13 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }]
-  ],
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@base': path.resolve(__dirname, '/public')
-      }
-    }
-  }
+  ]
 }
 
 function getSidebarArr() {
   const fs = require("fs");
   let docsPath = __dirname + "/../til/";
   let sidebarArr = [];
-  // let HomeFilelist = [];
   let filelist = fs.readdirSync(docsPath);
 
   // Next.js 처럼 폴더명에 . 들어가도 되게 수정하기
@@ -48,12 +40,8 @@ function getSidebarArr() {
       var list = fs.readdirSync(docsFolderPath);
       sidebarArr.push(makeSidebarObject(file, list));
     } 
-    // else {
-    //   HomeFilelist.push(file);
-    // }
   });
-  // sidebarArr.unshift(makeSidebarObject("", HomeFilelist));
-  // console.log(sidebarArr)
+  
   return recentTilToFirst(sidebarArr, 1, 0);
 }
 
