@@ -9,7 +9,7 @@ set -e
 # git push origin master
 
 # build
-yarn docs:build
+npm docs:build
 # navigate into the build output directory
 cd docs/.vuepress/dist
 
