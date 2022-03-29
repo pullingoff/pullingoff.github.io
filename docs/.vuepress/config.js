@@ -7,7 +7,8 @@ module.exports = {
     logo: '/logo.svg', // 로고 svg
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Github', link: '/blah/' }
+      { text: 'Blog', link: 'https://pullingoff.github.io' },
+      { text: 'Github', link: 'https://github.com/pullingoff' }
     ],
     sidebar: getSidebarArr(), 
     smoothScroll: true
