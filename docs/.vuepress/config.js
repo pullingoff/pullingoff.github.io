@@ -4,7 +4,7 @@ module.exports = {
   title: '개발자 박하은 : TIL',
   description: '하루하루 배운 것을 적어봅니당',
   themeConfig: {
-    logo: '/images/logo.svg', // 로고 이미지
+    logo: '/logo.svg', // 로고 svg
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Github', link: '/blah/' }
