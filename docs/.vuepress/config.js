@@ -1,33 +1,34 @@
 const path = require("path");
 
 module.exports = {
-    title: '개발자 박하은 : TIL',
-    description: '하루하루 배운 것을 적어봅니당',
-    themeConfig: {
-      logo: '', // 로고 이미지
-      nav: [
-        { text: 'Home', link: '/til/2022/03.html' },
-        { text: 'Github', link: 'https://github.com/pullingoff' }
-      ],
-      sidebar: getSidebarArr(), 
-      smoothScroll: true
-    },
-    base: "/vue-til/",  // github.io 뒤 주소
-    plugins: [
-      ["@vuepress/back-to-top"],
-      ["@vuepress/last-updated"],
+  title: '개발자 박하은 : TIL',
+  description: '하루하루 배운 것을 적어봅니당',
+  themeConfig: {
+    logo: '', // 로고 이미지
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Github', link: '/blah/' }
     ],
-    head: [
-      ['link', { rel: 'icon', href: '/logo.svg' }],
-      ['link', { rel: 'manifest', href: '/manifest.json' }]
-    ],
-    // plugins: [
-    //   ['@vuepress/pwa', {
-    //       serviceWorker: true,
-    //       updatePopup: true
-    //   }]
-    // ]
+    sidebar: getSidebarArr(), 
+    smoothScroll: true
+  },
+  base: "/vue-til/",  // github.io 뒤 주소
+  plugins: [
+    ["@vuepress/back-to-top"],
+    ["@vuepress/last-updated"],
+  ],
+  head: [
+    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }]
+  ],
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@base': path.resolve(__dirname, '/public')
+      }
+    }
   }
+}
 
 function getSidebarArr() {
   const fs = require("fs");
