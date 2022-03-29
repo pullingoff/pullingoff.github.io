@@ -1,13 +1,12 @@
 {
-  "name": "til",
+  "name": "TIL",
   "version": "1.0.0",
   "main": "index.js",
-  "base": "/vue-til/",
   "directories": {
     "doc": "docs"
   },
   "repository": "https://github.com/pullingoff/vue-TIL",
-  "author": "Haeun Park <devhaeun@gmail.com>",
+  "author": "Haeun Park <devhaeun@gamil.com>",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -15,14 +14,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/bundler-webpack": "^2.0.0-beta.36",
-    "@vuepress/plugin-back-to-top": "^1.9.7",
-    "@vuepress/plugin-last-updated": "^1.9.7",
     "vuepress": "^1.9.7"
-  },
-  "dependencies": {
-    "vue": "^2.6.14",
-    "webpack": "^4.0.0",
-    "html-entities":"^1.3.1"
   }
 }
