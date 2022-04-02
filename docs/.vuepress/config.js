@@ -8,6 +8,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Blog', link: 'https://pullingoff.github.io' },
+      { text: 'Note', link: 'https://pullingoff.github.io/vue-note' },
       { text: 'Github', link: 'https://github.com/pullingoff' }
     ],
     sidebar: getSidebarArr(), 
