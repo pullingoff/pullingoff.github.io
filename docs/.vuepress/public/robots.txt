@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pullingoff.github.io/sitemap.xml
