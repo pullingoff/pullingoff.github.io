@@ -7,7 +7,7 @@ module.exports = {
     logo: '/logo.svg', // 로고 svg
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Blog', link: 'https://pullingoff.github.io' },
+      { text: 'Blog', link: 'https://haeun.vercel.app' },
       { text: 'Note', link: 'https://pullingoff.github.io/vue-note' },
       { text: 'Github', link: 'https://github.com/pullingoff' }
     ],
