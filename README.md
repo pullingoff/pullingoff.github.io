@@ -14,6 +14,6 @@ yarn docs:build
 ## Tech Stacks
 vuepress
 
-### 과연 어떨 것인지?
+## Tips
 
-4월 1일 이후에 자동화 추가하기 (용량 꽉참...ㅎ)
+`docs` 폴더에 README.md 가 꼭 있어야 404 안 뜸
