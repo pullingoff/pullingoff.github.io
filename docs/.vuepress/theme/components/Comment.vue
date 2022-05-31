@@ -11,8 +11,8 @@ export default {
     utterances.crossorigin = 'anonymous';
     utterances.src = 'https://utteranc.es/client.js';
     
-    utterances.setAttribute('issue-term', 'pathname'); // pathname|url|title|og:title 중 택 1
-    utterances.setAttribute('theme','github-light'); // theme 설정
+    utterances.setAttribute('issue-term', 'title'); // pathname|url|title|og:title 중 택 1
+    utterances.setAttribute('theme','github-light'); 
     utterances.setAttribute('repo',`pullingoff/til-comments`); // 사용할 repository
 
     // script tag 삽입
