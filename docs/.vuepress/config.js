@@ -14,15 +14,19 @@ module.exports = {
     sidebar: getSidebarArr(), 
     smoothScroll: true
   },
-  base: "/vue-til/",  // github.io 뒤 주소
+  //base: "/vue-til/",   github.io 뒤 주소
   plugins: [
     ["@vuepress/back-to-top"],
     ["@vuepress/last-updated"],
+    ["sitemap", { hostname: "https://pulligoff.github.io" }],
   ],
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }]
-  ]
+  ],
+  markdown: {
+    lineNumbers: true
+  }
 }
 
 function getSidebarArr() {
