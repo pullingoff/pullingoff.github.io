@@ -6,7 +6,7 @@
     "doc": "docs"
   },
   "repository": "https://github.com/pullingoff/vue-TIL",
-  "author": "Haeun Park <devhaeun@gamil.com>",
+  "author": "Haeun Park <devhaeun@gmail.com>",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
