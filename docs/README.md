@@ -1,7 +1,5 @@
 ---
-title: 개발자 박하은 | TIL
-meta:
-  - name: 개발자 박하은 | TIL
+title: 반갑습니다!
 ---
 
 # 박하은의 TIL
