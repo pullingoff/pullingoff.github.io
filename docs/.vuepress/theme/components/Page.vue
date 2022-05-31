@@ -3,11 +3,11 @@
     <slot name="top" />
 
     <Content class="theme-default-content" />
-    <Comment />
+    
     <PageEdit />
 
     <PageNav v-bind="{ sidebarItems }" />
-
+    <Comment />
     <slot name="bottom" />
   </main>
 </template>
