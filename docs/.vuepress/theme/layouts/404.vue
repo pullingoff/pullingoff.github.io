@@ -3,10 +3,10 @@
     <div class="theme-default-content">
       <h1>404</h1>
 
-      <blockquote>{{ getMsg() }}</blockquote>
-
+      안녕하세요! 이 페이지는 아직 준비되어있지 않아요. <br/>
+      어쩌다 이 페이지에 오신건지 devhaeun@gmail.com으로 알려주실래요!?<br/>
       <RouterLink to="/">
-        Take me home.
+        ✨ 홈으로 돌아가기
       </RouterLink>
     </div>
   </div>
@@ -14,10 +14,7 @@
 
 <script>
 const msgs = [
-  `There's nothing here.`,
-  `How did we get here?`,
-  `That's a Four-Oh-Four.`,
-  `Looks like we've got some broken links.`
+  `안녕하세요! 이 페이지는 아직 준비되어있지 않아요. 어쩌다 이 페이지에 오신건지 devhaeun@gmail.com으로 알려주실래요!?`,
 ]
 
 export default {
