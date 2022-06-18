@@ -28,4 +28,12 @@ const { data: imgData } = await axios.get(
 
 근데 하다보면... 403 에러가 뜬다. `response.data`를 보면 **Rate Limit Exceeded** 라고 적혀있다. API를 무료로 이용하는 Demo 버전의 경우 시간당 50회만 요청이 가능해서 제한된 횟수를 넘어서 에러를 보낸다.
 
+```js
+// 403 Error Response
+data: "Rate Limit Exceeded"
+headers:
+x-ratelimit-limit: "50"
+x-ratelimit-remaining: "0"
+```
+
 그럼 이런 상황엔 어떻게 처리를 해야할까? 지금은 그냥 `console.log(error)`만 해둔 상태다.
