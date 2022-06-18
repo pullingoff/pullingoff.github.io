@@ -111,10 +111,12 @@ $navbar-horizontal-padding = 1.5rem
     font-weight 600
     color $textColor
     position relative
+    &:hover
+      color $accentColor
   .links
     padding-left 1.5rem
     box-sizing border-box
-    background-color #fef9e2
+    color #2c3c55
     white-space nowrap
     font-size 0.9rem
     position absolute
