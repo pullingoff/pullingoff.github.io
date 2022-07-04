@@ -2,8 +2,10 @@
 title: 반갑습니다!
 ---
 
-# 박하은의 TIL
+## 안녕하세요👋
 
-### 안녕하세요👋 ! 공부한 것들을 기록하고자 만들게 된 TIL 노트입니다
+읽은 기술서적, HTML, CSS, 자바스크립트, 운영체제와 네트워크 등 공부한 것을 가볍게 기록합니다.
 
-### [React, Next.js로 만든 블로그](https://pullingoff.github.io)와 vuepress로 만든 이 공간을 함께 쓰고 있습니다
+### Links
+
+[React, Next.js로 만든 블로그](https://pullingoff.github.io)

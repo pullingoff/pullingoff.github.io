@@ -1,5 +1,5 @@
 ---
-title: "[CSS] CSS units(단위)를 알아보자"
+title: "CSS units(단위)를 알아보자"
 date: 2021-08-15 08:00
 ---
 

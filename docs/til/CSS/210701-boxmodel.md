@@ -1,13 +1,13 @@
 ---
-title: "[CSS] Learn Css! Box Model 한국어 해석/ 박스 모델이란?"
+title: "Learn Css! Box Model 한국어 해석/ 박스 모델이란?"
 date: 2021-07-01 08:00
 ---
 
-원문(영어): https://web.dev/learn/css/box-model/
+원문(영어): <https://web.dev/learn/css/box-model/>
 공부 내용을 우리말로 기록하되, 원어일 때 이해가 쉬운 부분은 번역하지 않음.
 
 - border-radius를 적용해 원형처럼 보이거나 평범한 텍스트마저도 **CSS로 표현되는 모든 것은 box이다**.  
-- CSS 요소는 display 값이나 그 안 내용물 등에 따라 다른 성질을 가진다. 
+- CSS 요소는 display 값이나 그 안 내용물 등에 따라 다른 성질을 가진다.
 
 ## 내부 요소(contents)가 박스의 사이즈에 영향을 끼치는 경우
 
@@ -20,7 +20,7 @@ p {
 }
 `
 
-이 코드를 작성하면 해당 태그는 width로 입력해준 100px가 아니라 142px의 너비를 가지게 된다. 
+이 코드를 작성하면 해당 태그는 width로 입력해준 100px가 아니라 142px의 너비를 가지게 된다.
 
 ![extrinsic vs intrinsic](https://images.velog.io/images/hailey99/post/a7b20181-1e01-4a90-916f-43f53996f706/image.png)
 
@@ -40,7 +40,7 @@ box model은 이렇게 4개로 구분된다.
 1. **content box**: content(내용물)이 자리하는 곳. 이 내용물이 그 부모(box)의 크기를 결정.
 2. **padding box**: content box를 둘러쌈. 이때 padding이란 box의 내부를 의미. 만약 박스가 overflow: auto나 scroll로 돼있으면 이 부분에도 스크롤 바가 생긴다.
 3. **border box**: padding box를 둘러쌈. border edge가 우리가 볼 수 있는 box의 가장 큰 범위.
-4. **margin box**: box 겉부분. outline, box-shadow 와 같은 속성이 이부분에서 사용됨. 이 요소들은 box의 사이즈에 영향을 미치지 않음. 
+4. **margin box**: box 겉부분. outline, box-shadow 와 같은 속성이 이부분에서 사용됨. 이 요소들은 box의 사이즈에 영향을 미치지 않음.
 
 Box model을 잘 사용하기 위해선 브라우저에서 일어나는 일을 이해해야함.
 
