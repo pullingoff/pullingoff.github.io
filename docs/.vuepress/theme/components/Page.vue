@@ -7,7 +7,6 @@
     <PageEdit />
 
     <PageNav v-bind="{ sidebarItems }" />
-    <Comment />
     <slot name="bottom" />
   </main>
 </template>
